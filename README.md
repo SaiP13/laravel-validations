@@ -70,15 +70,15 @@ use Validator;
         5) @error('email')
         6) $message
 
-        #All:
+### #All:
         @foreach ($errors->all() as $error)
             <li>{{ $error }}</li>
         @endforeach
-        #Single error: 
+### #Single error: 
             @error('title')
                 <div class="alert alert-danger">{{ $message }}</div>
             @enderror
-        #if cond:
+### #if cond:
             if ($errors->has('email')) {
                 {{ $errors->first('email'); || $errors->get('email') }}
             }    
